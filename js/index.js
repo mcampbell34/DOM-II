@@ -47,6 +47,11 @@ function zoom(event) {
   let scale = 1;
   img.onwheel = zoom;
 
+   
+  document.addEventListener('click', (event) => {
+    alert('Try to use your wheel on this image!')
+  });
+
 
 
 headingOne.style.cursor = "pointer";
@@ -119,3 +124,16 @@ document.addEventListener("drop", function(event) {
     event.target.appendChild( dragged );
   }
 }, false);
+
+/// Adding a second button from the DOM /// 
+
+let button = document.createElement('button'); 
+
+button.textContent  = "Sign Me Up. PS I was created in JS"; 
+button.addEventListener('click', (e) => {
+  alert('I was created with DOM')
+})
+let destination1 = document.querySelector('.destination'); 
+destination1.appendChild(button); 
+
+//// 
